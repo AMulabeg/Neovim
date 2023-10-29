@@ -82,7 +82,7 @@ return {
       settings = {
         python = {
           analysis = {
-            extraPaths = { "/opt/homebrew/anaconda3/lib/" },
+            extraPaths = { "/opt/homebrew/anaconda3/pkgs" },
           },
         },
       },
