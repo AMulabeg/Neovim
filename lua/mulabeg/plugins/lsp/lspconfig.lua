@@ -70,11 +70,6 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    --    lspconfig["hls"].setup({
-    --    capabilities = capabilities,
-    --    on_attach = on_attach,
-    --})
-
     -- configure python server
     lspconfig["pyright"].setup({
       capabilities = capabilities,
@@ -87,6 +82,7 @@ return {
         },
       },
     })
+
     -- configure lua server
     lspconfig["clangd"].setup({
       capabilities = capabilities,
