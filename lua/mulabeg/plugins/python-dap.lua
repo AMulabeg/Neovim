@@ -2,6 +2,6 @@ return {
   "mfussenegger/nvim-dap-python",
   event = "VeryLazy",
   config = function()
-    require("dap-python").setup("~/Uni/WSRechnen/.venv/bin/python")
+    require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
   end,
 }
