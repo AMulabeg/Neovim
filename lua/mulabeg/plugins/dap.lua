@@ -7,7 +7,7 @@ return {
       type = "server",
       port = "${port}",
       executable = {
-        command = "/usr/bin/codelldb",
+        command = "/Users/amer/.local/share/nvim/mason/bin/codelldb",
         args = { "--port", "${port}" },
       },
     }
@@ -20,7 +20,13 @@ return {
           return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
         args = function()
-          return { vim.fn.input("Args: ", "", "file") }
+          local x = vim.fn.input("Args: ", "", "file")
+          local a = {}
+          while string.len(x) >= 1 do
+            table.insert(a, x)
+            x = vim.fn.input("Args: ", "", "file")
+          end
+          return a
         end,
         cwd = "${workspaceFolder}",
         stopOnEntry = false,

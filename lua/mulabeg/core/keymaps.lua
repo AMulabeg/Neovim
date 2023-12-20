@@ -2,7 +2,6 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
-
 ---------------------
 -- General Keymaps -------------------
 
@@ -30,6 +29,26 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
+--toggle term
 keymap.set("n", "<leader>jh", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Open Terminal Horizontally" })
 keymap.set("n", "<leader>jt", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Open Terminal Tab" })
+
+--trouble
+keymap.set("n", "<leader>xx", function()
+  require("trouble").toggle()
+end)
+keymap.set("n", "<leader>xw", function()
+  require("trouble").toggle("workspace_diagnostics")
+end)
+keymap.set("n", "<leader>xd", function()
+  require("trouble").toggle("document_diagnostics")
+end)
+keymap.set("n", "<leader>xq", function()
+  require("trouble").toggle("quickfix")
+end)
+keymap.set("n", "<leader>xl", function()
+  require("trouble").toggle("loclist")
+end)
+keymap.set("n", "gR", function()
+  require("trouble").toggle("lsp_references")
+end)
