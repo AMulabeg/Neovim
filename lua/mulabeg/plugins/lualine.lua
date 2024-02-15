@@ -52,7 +52,7 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        theme = "night-owl",
+        theme = my_lualine_theme,
       },
       sections = {
         lualine_x = {
