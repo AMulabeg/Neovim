@@ -1,6 +1,5 @@
 -- set leader key to space
 vim.g.mapleader = " "
-
 local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps -------------------
@@ -33,6 +32,8 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<leader>jh", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Open Terminal Horizontally" })
 keymap.set("n", "<leader>jt", "<cmd>ToggleTerm direction=tab<cr>", { desc = "Open Terminal Tab" })
 
+--neogit
+keymap.set("n", "<leader>go", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
 --trouble
 
 keymap.set("n", "<leader>xx", function()
