@@ -32,10 +32,10 @@ return {
         stopOnEntry = false,
       },
     }
-    vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint, { desc = "Add breakpoint at Line" })
-    vim.keymap.set("n", "<leader>dr", dap.continue, { desc = "Start Debugging" })
-    vim.keymap.set("n", "<leader>ds", dap.step_into, { desc = "Step Intp" })
-    vim.keymap.set("n", "<leader>do", dap.step_over, { desc = "Step Over" })
-    vim.keymap.set("n", "<leader>dp", dap.repl.open, { desc = "Repl Open" })
+    vim.keymap.set("n", "<leader>xb", dap.toggle_breakpoint, { desc = "Add breakpoint at Line" })
+    vim.keymap.set("n", "<leader>xr", dap.continue, { desc = "Start Debugging" })
+    vim.keymap.set("n", "<leader>xs", dap.step_into, { desc = "Step Intp" })
+    vim.keymap.set("n", "<leader>xo", dap.step_over, { desc = "Step Over" })
+    vim.keymap.set("n", "<leader>xp", dap.repl.open, { desc = "Repl Open" })
   end,
 }
