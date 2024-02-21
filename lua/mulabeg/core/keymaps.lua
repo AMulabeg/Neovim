@@ -31,7 +31,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 --neogit
 keymap.set("n", "<leader>go", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
---trouble
+keymap.set("n", "<leader>bt", "<cmd>GitBlameToggle<CR>", { desc = "Toggle GitBlame" })
 
 --keymap.set("n", "<leader>xx", function()
 --require("trouble").open()
