@@ -32,14 +32,3 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 --neogit
 keymap.set("n", "<leader>go", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
 keymap.set("n", "<leader>bt", "<cmd>GitBlameToggle<CR>", { desc = "Toggle GitBlame" })
-
---keymap.set("n", "<leader>xx", function()
---require("trouble").open()
---end, { desc = "open trouble" })
---keymap.set("n", "<leader>xw", function()
---require("trouble").open("workspace_diagnostics")
---end, { desc = "open workspace diagnostics" })
---keymap.set("n", "<leader>xd", function()
---require("trouble").open("document_diagnostics")
---end, { desc = "open document diagnostics" })
---keymap.set("n", "<leader>xr", "<cmd>TroubleRefresh<CR>", { desc = "refresh trouble" })

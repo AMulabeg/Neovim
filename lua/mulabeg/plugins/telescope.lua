@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
@@ -23,7 +24,6 @@ return {
     })
 
     telescope.load_extension("fzf")
-
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 

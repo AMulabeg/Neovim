@@ -50,6 +50,7 @@ return {
         formatting.stylua, -- lua formatter
         formatting.isort,
         formatting.black,
+
         --diagnostics.pylint,
         diagnostics.eslint_d.with({ -- js/ts linter
           condition = function(utils)

@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.python3_host_prog = "/opt/homebrew/anaconda3/bin/python3"
 require("lazy").setup({ { import = "mulabeg.plugins" }, { import = "mulabeg.plugins.lsp" } }, {
   install = {
-    colorscheme = { "nightfly" },
+    colorscheme = { "night-owl" },
   },
   checker = {
     enabled = true,
