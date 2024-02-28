@@ -5,7 +5,6 @@ return --lazy
   config = function()
     local telescope = require("telescope")
     telescope.setup({
-<<<<<<< HEAD
       extensions = {
         file_browser = {
           hijack_netrw = true,
@@ -18,21 +17,6 @@ return --lazy
           ["n"] = {
             -- your custom normal mode mappings
           },
-=======
-      defaults = {
-        theme = "center",
-        sorting_strategy = "ascending",
-        layout_config = {
-          horizontal = {
-            prompt_position = "top",
-            preview_width = 0.3,
-          },
-        },
-      },
-      extensions = {
-        file_browser = {
-          hijack_netrw = true,
->>>>>>> b1c012b3db9ae68337c06fabc8afc3e0a4e29fb8
         },
       },
     })
