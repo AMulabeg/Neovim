@@ -5,10 +5,19 @@ return --lazy
   config = function()
     local telescope = require("telescope")
     telescope.setup({
+      defaults = {
+        theme = "center",
+        sorting_strategy = "ascending",
+        layout_config = {
+          horizontal = {
+            prompt_position = "top",
+            preview_width = 0.3,
+          },
+        },
+      },
       extensions = {
         file_browser = {
           hijack_netrw = true,
-          theme = "ivy",
         },
         mappings = {
           ["i"] = {
