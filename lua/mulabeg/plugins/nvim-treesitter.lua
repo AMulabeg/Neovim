@@ -44,6 +44,7 @@ return {
           "query",
           "c",
           "python",
+          "java",
         },
         incremental_selection = {
           enable = true,

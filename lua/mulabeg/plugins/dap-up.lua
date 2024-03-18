@@ -1,5 +1,6 @@
 return {
   "rcarriga/nvim-dap-ui",
+  "nvim-neotest/nvim-nio",
   event = "VeryLazy",
   dependencies = "mfussenegger/nvim-dap",
   config = function()
