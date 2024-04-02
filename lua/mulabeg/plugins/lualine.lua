@@ -4,7 +4,6 @@ return {
   config = function()
     local lualine = require("lualine")
     local lazy_status = require("lazy.status") -- to configure lazy pending updates count
-    local git_blame = require("gitblame")
     local colors = {
       blue = "#65D1FF",
       green = "#3EFFDC",

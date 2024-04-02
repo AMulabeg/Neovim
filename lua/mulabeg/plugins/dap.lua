@@ -4,32 +4,23 @@ return {
   config = function()
     local dap = require("dap")
     dap.adapters.lldb = {
-      type = "server",
+      type = "executable",
       port = "${port}",
-      executable = {
-        command = "/Users/amer/.local/share/nvim/mason/bin/codelldb",
-        args = { "--port", "${port}" },
-      },
+      command = "/opt/homebrew/opt/llvm/bin/lldb-vscode", -- adjust as needed, must be absolute path
+      name = "lldb",
     }
+    local dap = require("dap")
     dap.configurations.c = {
       {
+        name = "Launch",
         type = "lldb",
         request = "launch",
-        name = "Launch file",
         program = function()
           return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
-        args = function()
-          local x = vim.fn.input("Args: ", "", "file")
-          local a = {}
-          while string.len(x) >= 1 do
-            table.insert(a, x)
-            x = vim.fn.input("Args: ", "", "file")
-          end
-          return a
-        end,
         cwd = "${workspaceFolder}",
         stopOnEntry = false,
+        args = {},
       },
     }
     vim.keymap.set("n", "<leader>xb", dap.toggle_breakpoint, { desc = "Add breakpoint at Line" })
