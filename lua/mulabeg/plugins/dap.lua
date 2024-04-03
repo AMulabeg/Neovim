@@ -1,6 +1,7 @@
 return {
   "mfussenegger/nvim-dap",
   event = "VeryLazy",
+
   config = function()
     local dap = require("dap")
     dap.adapters.lldb = {
@@ -9,7 +10,6 @@ return {
       command = "/opt/homebrew/opt/llvm/bin/lldb-vscode", -- adjust as needed, must be absolute path
       name = "lldb",
     }
-    local dap = require("dap")
     dap.configurations.c = {
       {
         name = "Launch",

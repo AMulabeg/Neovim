@@ -30,7 +30,7 @@ return --lazy
       },
     })
     local keymap = vim.keymap -- for conciseness
-    keymap.set("n", "<leader>ft", "<cmd>Telescope file_browser<CR>", { desc = "File Tree" })
+    keymap.set("n", "<leader>fn", "<cmd>Telescope file_browser<CR>", { desc = "File Tree" })
 
     telescope.load_extension("file_browser")
   end,
