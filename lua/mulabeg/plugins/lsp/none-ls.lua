@@ -20,6 +20,8 @@ return {
         --        "pylint", -- python linter
         "clangd",
         "clang-format",
+        "markdown",
+        "markdown_inline",
       },
     })
 
