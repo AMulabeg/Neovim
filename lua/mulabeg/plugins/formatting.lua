@@ -17,7 +17,7 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         -- markdown = { "prettier" },
-        ["markdown"] = { { "prettierd", "prettier" } },
+        ["markdown"] = { { "prettierd" } },
         graphql = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
