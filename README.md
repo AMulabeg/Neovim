@@ -5,4 +5,5 @@ If you have any issues or questions, feel free to open an issue or contact me di
 
 Current language support: C/C++, Lua, Python, Haskell and Java (but I don't really recommend you use it for that)
 
-<img width="1680" alt="Screenshot 2024-02-18 at 00 26 34" src="https://github.com/AMulabeg/Neovim/assets/114394694/d2658fcf-da59-4917-b817-3b011225858e">
+
+<img width="1680" alt="image" src="https://github.com/AMulabeg/Neovim/assets/114394694/248f863c-324b-4162-94fc-6ed82e17657c">
