@@ -80,11 +80,36 @@ return {
 
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
+      ["pyright"] = function()
+        lspconfig["pyright"].setup({
+          capabilities = capabilities,
+          settings = {
+            python = {
+              analysis = {
+                extraPaths = { "/opt/homebrew/anaconda3/pkgs" },
+              },
+            },
+          },
+        })
+      end,
+
       function(server_name)
         lspconfig[server_name].setup({
           capabilities = capabilities,
         })
       end,
+
+      ["clangd"] = function()
+        lspconfig["clangd"].setup({
+          capabilities = capabilities,
+
+          cmd = {
+            "clangd",
+            "--offset-encoding=utf-16",
+          },
+        })
+      end,
+
       ["lua_ls"] = function()
         -- configure lua server (with special settings)
         lspconfig["lua_ls"].setup({

@@ -1,29 +1,37 @@
 return {
+  -- // this doesnt not work
   "mfussenegger/nvim-dap",
   event = "VeryLazy",
 
   config = function()
     local dap = require("dap")
-    dap.adapters.lldb = {
+
+    -- Set up C/C++ debugging
+    dap.adapters.cpp = {
       type = "executable",
-      port = "${port}",
-      command = "/opt/homebrew/opt/llvm/bin/lldb-vscode", -- adjust as needed, must be absolute path
+      attach = {
+        pidProperty = "pid",
+        pidSelect = "ask",
+      },
+      command = "lldb-vscode",
       name = "lldb",
     }
-    local dap = require("dap")
-    dap.configurations.c = {
+
+    dap.configurations.cpp = {
       {
         name = "Launch",
-        type = "lldb",
+        type = "cppdbg",
         request = "launch",
         program = function()
           return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
         end,
         cwd = "${workspaceFolder}",
-        stopOnEntry = false,
+        stopAtEntry = true,
         args = {},
+        runInTerminal = false,
       },
     }
+
     vim.keymap.set("n", "<leader>xb", dap.toggle_breakpoint, { desc = "Add breakpoint at Line" })
     vim.keymap.set("n", "<leader>xr", dap.continue, { desc = "Start Debugging" })
     vim.keymap.set("n", "<leader>xs", dap.step_into, { desc = "Step Intp" })
