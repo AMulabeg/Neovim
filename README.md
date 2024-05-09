@@ -3,7 +3,7 @@ If you want to use my configuration, you can clone this repository (or even fork
 I am gladly taking feedback and suggestions :3
 If you have any issues or questions, feel free to open an issue or contact me directly on Discord: \_a1mer or on Twitter: @AMulabeg
 
-Current language support: C/C++, Lua, Python, Haskell and Java (but I don't really recommend you use it for that)
+Current language support: C/C++, Lua, Python and Haskell
 
 
 <img width="1680" alt="image" src="https://github.com/AMulabeg/Neovim/assets/114394694/248f863c-324b-4162-94fc-6ed82e17657c">
