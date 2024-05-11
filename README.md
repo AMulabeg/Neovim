@@ -44,7 +44,7 @@ git clone https://github.com/AMulabeg/Neovim.git ~/.config/nvim
      ```
      sudo dnf install ripgrep
      ```
-  - [A NerfFont](https://www.nerdfonts.com/)
+  - [A NerdFont](https://www.nerdfonts.com/)
   - [Clang (If you wish to use C/C++)](https://clang.llvm.org/)
   - [Anaconda (If you wish to use Python)](https://www.anaconda.com/)
   - [GHC (If you wish to use Haskell)](https://www.haskell.org/ghc/)
