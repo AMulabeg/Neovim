@@ -26,6 +26,29 @@ To use this configuration, follow these steps:
 ```bash
 git clone https://github.com/AMulabeg/Neovim.git ~/.config/nvim
 ```
+3. Install the folowing tools:
+  - [Rip Grep](https://github.com/BurntSushi/ripgrep) :
+    - With macOS:
+     ```bash
+     brew install ripgrep
+     ```
+    - With Arch-based Distros:
+     ```
+     yay -S ripgrep
+     ```
+    - With Debian-based Distros:
+     ```
+     sudo apt-get install ripgrep
+     ```
+    - With RedHad-based Distros:
+     ```
+     sudo dnf install ripgrep
+     ```
+  - [A NerfFont](https://www.nerdfonts.com/)
+  - [Clang (If you wish to use C/C++)](https://clang.llvm.org/)
+  - [Anaconda (If you wish to use Python)](https://www.anaconda.com/)
+  - [GHC (If you wish to use Haskell)](https://www.haskell.org/ghc/)
+     
 3. Launch Neovim.
 4. Enjoy using Neovim with this personalized configuration!
 
