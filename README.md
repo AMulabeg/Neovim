@@ -1,9 +1,56 @@
-Hello and welcome to my Neovim configuration! This is a work in progress and I am constantly updating it. I am using Neovim as my main text editor and I am trying to make it as efficient as possible.
-If you want to use my configuration, you can clone this repository (or even fork it).
-I am gladly taking feedback and suggestions :3
-If you have any issues or questions, feel free to open an issue or contact me directly on Discord: \_a1mer or on Twitter: @AMulabeg
+# Neovim Configuration
 
-Current language support: C/C++, Lua, Python and Haskell
+Welcome to my Neovim configuration repository! This repository houses my personalized setup for Neovim, tailored to enhance my productivity and streamline my workflow. Whether you're a seasoned Neovim user or just getting started, feel free to explore and adapt elements of this configuration to suit your own needs.
+
+## Table of Contents
+
+- [About Neovim](#about-neovim)
+- [Installation](#installation)
+- [Plugins](#plugins)
+- [Languages](#languages)
+- [Customization](#customization)
+- [Feedback and Contributions](#feedback-and-contributions)
+- [License](#license)
+
+## About Neovim
+
+[Neovim](https://neovim.io/) is a highly configurable, extensible text editor that is based on Vim. It seeks to aggressively refactor Vim in order to simplify maintenance and encourage contributions.
+
+## Installation
+
+To use this configuration, follow these steps:
+
+1. Ensure you have Neovim installed on your system.
+2. Clone this repository to your local machine:
+
+```bash
+git clone https://github.com/AMulabeg/Neovim.git ~/.config/nvim
+```
+3. Launch Neovim.
+4. Enjoy using Neovim with this personalized configuration!
 
 
-<img width="1680" alt="image" src="https://github.com/AMulabeg/Neovim/assets/114394694/248f863c-324b-4162-94fc-6ed82e17657c">
+## Plugins
+
+This configuration utilizes various plugins to enhance Neovim's functionality. Some notable plugins include:
+
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim): A lean and mean status/tabline for Neovim.
+- [LSPConfig](https://github.com/neovim/nvim-lspconfig): Intellisense engine for Neovim.
+- [NvimTree](https://github.com/nvim-tree/nvim-tree.lua): A tree explorer plugin for Neovim.
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim): Fuzzy file finder for Neovim.
+
+## Languages
+
+This configuration supports: C/C++, Python and Haskell
+
+## Customization
+
+Feel free to customize this configuration to better suit your needs. You can tweak key mappings, adjust plugin settings, or even add/remove plugins according to your preferences. The configuration files are thoroughly commented to guide you through the customization process.
+
+## Feedback and Contributions
+
+Feedback and contributions are always welcome! If you have any suggestions for improvement or encounter any issues with this configuration, please don't hesitate to open an issue or submit a pull request. Your input is greatly appreciated. And of cource if you enjoy the config, give it a Star, it means a lot to me
+
+## License
+
+This Neovim configuration is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it as you see fit.
