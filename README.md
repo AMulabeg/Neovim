@@ -11,6 +11,8 @@ Welcome to my Neovim configuration repository! This repository houses my persona
 - [Customization](#customization)
 - [Feedback and Contributions](#feedback-and-contributions)
 - [License](#license)
+## Appearance
+<img width="1920" alt="image" src="https://github.com/AMulabeg/Neovim/assets/114394694/22d043c8-b005-4cde-a726-65cfc59aa42b">
 
 ## About Neovim
 
