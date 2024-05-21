@@ -66,7 +66,7 @@ This configuration utilizes various plugins to enhance Neovim's functionality. S
 
 ## Languages
 
-This configuration supports: C/C++, Python and Haskell
+This configuration supports: C/C++, Python, Haskell and SQL
 
 ## Customization
 
