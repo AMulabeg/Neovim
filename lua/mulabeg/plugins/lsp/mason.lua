@@ -28,12 +28,12 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "lua_ls",
-        "pyright",
         "clangd",
         "kotlin_language_server",
         "gopls",
         "ruff",
         "hls",
+        "basedpyright",
       },
     })
 
@@ -43,7 +43,6 @@ return {
         "stylua", -- lua formatter
         "isort", -- python formatter
         "black", -- python formatter
-        "mypy",
         "clang-format",
         "ktlint",
       },

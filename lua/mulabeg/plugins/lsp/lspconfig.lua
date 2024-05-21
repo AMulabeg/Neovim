@@ -86,8 +86,8 @@ return {
 
     mason_lspconfig.setup_handlers({
       -- default handler for installed servers
-      ["pyright"] = function()
-        lspconfig["pyright"].setup({
+      ["basedpyright"] = function()
+        lspconfig["basedpyright"].setup({
           capabilities = capabilities,
           settings = {
             python = {
