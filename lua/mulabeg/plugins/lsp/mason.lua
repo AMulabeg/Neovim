@@ -33,6 +33,7 @@ return {
         "kotlin_language_server",
         "gopls",
         "ruff",
+        "hls",
       },
     })
 
