@@ -9,10 +9,10 @@ return {
       -- Lua
       vim.cmd.colorscheme("night-owl")
 
-      -- require("onedark").setup({
-      --   -- style = "deep",
-      -- })
-      -- require("onedark").load() --load the colorscheme here
+      --   require("onedark").setup({
+      --     -- style = "deep",
+      --   })
+      --   require("onedark").load() --load the colorscheme here
     end,
   },
 }
