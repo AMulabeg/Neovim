@@ -1,5 +1,6 @@
 return {
   "xiyaowong/transparent.nvim",
+  event = "VeryLazy",
   groups = { -- table: default groups
     "Normal",
     "NormalNC",

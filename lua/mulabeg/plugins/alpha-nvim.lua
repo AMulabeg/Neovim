@@ -36,10 +36,12 @@ return {
       dashboard.button("SPC fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
       dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
-
+    local function footer()
+      return "Ligma Balls..."
+    end
     -- Send config to alpha
     alpha.setup(dashboard.opts)
-
+    dashboard.section.footer.val = footer()
     -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,

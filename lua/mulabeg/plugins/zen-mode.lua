@@ -1,6 +1,7 @@
 -- Lua
 return {
   "folke/zen-mode.nvim",
+  event = "VeryLazy",
   cmd = "ZenMode",
   deps = {
     "b0o/incline.nvim",

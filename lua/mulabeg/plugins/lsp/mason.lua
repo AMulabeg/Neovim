@@ -29,7 +29,6 @@ return {
       ensure_installed = {
         "lua_ls",
         "clangd",
-        "kotlin_language_server",
         "gopls",
         "ruff",
         "hls",
@@ -44,7 +43,6 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "clang-format",
-        "ktlint",
       },
     })
   end,
