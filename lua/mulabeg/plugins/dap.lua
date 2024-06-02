@@ -1,7 +1,7 @@
 return {
   -- // this doesnt not work
   "mfussenegger/nvim-dap",
-  lazy = false,
+  lazy = true,
 
   config = function()
     local dap = require("dap")

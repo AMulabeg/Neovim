@@ -1,5 +1,6 @@
 return {
   "CRAG666/code_runner.nvim",
+  lazy = true,
   config = function()
     local code_runner = require("code_runner")
     code_runner.setup({

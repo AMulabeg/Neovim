@@ -16,7 +16,7 @@ return {
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
-        nix = { "nixpkgs-fmt" },
+        nix = { "alejandra" },
         -- markdown = { "prettier" },
         ["markdown"] = { { "prettierd" } },
         graphql = { "prettier" },

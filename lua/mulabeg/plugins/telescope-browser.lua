@@ -2,6 +2,7 @@ return --lazy
 {
   "nvim-telescope/telescope-file-browser.nvim",
   dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  lazy = true,
   config = function()
     local telescope = require("telescope")
     telescope.setup({
