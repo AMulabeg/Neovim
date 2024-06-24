@@ -35,7 +35,6 @@ return {
         "hls",
         "basedpyright",
         "jdtls",
-        "nil_ls",
       },
     })
 
