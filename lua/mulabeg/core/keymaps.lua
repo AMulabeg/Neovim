@@ -32,9 +32,6 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<leader>bp", "<Cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<leader>bn", "<Cmd>bnext<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<leader>bd", "<Cmd>bdelete<CR>", { desc = "Delete buffer" })
---neogit
-keymap.set("n", "<leader>go", "<cmd>Neogit<CR>", { desc = "Open Neogit" })
-keymap.set("n", "<leader>bt", "<cmd>GitBlameToggle<CR>", { desc = "Toggle GitBlame" })
 --code runner
 keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, desc = "Run code" })
 keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, desc = "Run file" })
