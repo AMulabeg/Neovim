@@ -1,5 +1,7 @@
 -- ~/.config/nvim/after/ftplugin/haskell.lua
 local ht = require("haskell-tools")
+Event = "VeryLazy"
+
 local bufnr = vim.api.nvim_get_current_buf()
 ht.lsp.start()
 

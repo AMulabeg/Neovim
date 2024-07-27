@@ -14,7 +14,7 @@ return {
       editor = {
         image = "https://cdn.icon-icons.com/icons2/1381/PNG/512/vim_94609.png", -- Image ID or URL in case a custom client id is provided
         client = "1157438221865717891", -- vim, neovim, lunarvim, nvchad, astronvim or your application's client id
-        tooltip = "Coding Hard or Hardily Coding", -- Text to display when hovering over the editor's image
+        tooltip = "Coding Hard or Hardly Coding", -- Text to display when hovering over the editor's image
       },
       display = {
         show_time = true, -- Display start timestamp
