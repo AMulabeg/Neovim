@@ -32,10 +32,3 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<leader>bp", "<Cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<leader>bn", "<Cmd>bnext<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<leader>bd", "<Cmd>bdelete<CR>", { desc = "Delete buffer" })
---code runner
-keymap.set("n", "<leader>rr", ":RunCode<CR>", { noremap = true, desc = "Run code" })
-keymap.set("n", "<leader>rf", ":RunFile<CR>", { noremap = true, desc = "Run file" })
-keymap.set("n", "<leader>rp", ":RunProject<CR>", { noremap = true, desc = "Run project" })
-keymap.set("n", "<leader>rc", ":RunClose<CR>", { noremap = true, desc = "Close run window" })
-keymap.set("n", "<leader>crf", ":CRFiletype<CR>", { noremap = true, desc = "Run file by filetype" })
-keymap.set("n", "<leader>crp", ":CRProjects<CR>", { noremap = true, desc = "Run project by filetype" })
