@@ -33,6 +33,7 @@ return {
           "hls",
           "pyright",
           "jdtls",
+          "solargraph",
         },
       })
 
@@ -40,9 +41,10 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
           "prettier", -- prettier formatter
-          "stylua",   -- lua formatter
-          "black",    -- python formatter
+          "stylua", -- lua formatter
+          "black", -- python formatter
           "clang-format",
+          "rubyfmt",
         },
       })
     end,
@@ -135,4 +137,3 @@ return {
     end,
   },
 }
-

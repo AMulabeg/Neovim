@@ -18,8 +18,9 @@ return {
         yaml = { "prettier" },
         graphql = { "prettier" },
         lua = { "stylua" },
-        python = { "isort", "black" },
+        python = { "black" },
         c = { "clang-format" },
+        ruby = { "rubyfmt" },
       },
       format_on_save = {
         lsp_fallback = true,
