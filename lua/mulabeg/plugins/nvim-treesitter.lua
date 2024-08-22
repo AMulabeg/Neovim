@@ -46,6 +46,7 @@ return {
           "c",
           "python",
           "java",
+          "haskell",
         },
         incremental_selection = {
           enable = true,

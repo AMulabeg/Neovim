@@ -30,10 +30,10 @@ return {
           "clangd",
           "gopls",
           "ruff",
-          "hls",
           "pyright",
           "jdtls",
           "solargraph",
+          "nil_ls",
         },
       })
 
@@ -45,6 +45,7 @@ return {
           "black", -- python formatter
           "clang-format",
           "rubyfmt",
+          "nixpkgs-fmt",
         },
       })
     end,
@@ -133,6 +134,17 @@ return {
         ["pyright"] = function()
           lspconfig["pyright"].setup({
             capabilities = capabilities,
+          })
+        end,
+        ["nil_ls"] = function()
+          lspconfig["nil_ls"].setup({
+            capabilities = capabilities,
+            settings = {
+              ["nil"] = {
+                formatting = { command = { "nixpkgs-fmt" } }, -- Ensure nixfmt is used for formatting
+                autoarchive = true, -- If there's a similar setting related to autoarchive
+              },
+            },
           })
         end,
       })
