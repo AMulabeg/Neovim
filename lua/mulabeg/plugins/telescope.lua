@@ -13,6 +13,11 @@ return {
     local actions = require("telescope.actions")
     telescope.setup({
       defaults = {
+        pickers = {
+          find_files = {
+            find_command = { "find", "-maxdepth", "3", ".", "-type", "f" },
+          },
+        },
         path_display = { "truncate " },
         mappings = {
           i = {
