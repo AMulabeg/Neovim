@@ -21,7 +21,7 @@ return {
           height = 0.4, -- Adjust the height as needed
           prompt_position = "top",
         },
-        initial_mode = "normal",
+        -- initial_mode = "normal",
         sorting_strategy = "ascending", -- Keep the prompt at the top
         winblend = 10, -- Add transparency if you want
         path_display = { "truncate " },
