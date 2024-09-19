@@ -1,24 +1,27 @@
 return {
   "nvim-telescope/telescope.nvim",
-  event = "VeryLazy",
+  lazy = false,
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
+    "nvim-telescope/telescope-file-browser.nvim", -- Add the file browser dependency
   },
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
     telescope.setup({
       defaults = {
+
         -- Ivy style layout
         layout_strategy = "bottom_pane",
         layout_config = {
           height = 0.4, -- Adjust the height as needed
           prompt_position = "top",
         },
+        initial_mode = "normal",
         sorting_strategy = "ascending", -- Keep the prompt at the top
         winblend = 10, -- Add transparency if you want
         path_display = { "truncate " },
@@ -39,8 +42,17 @@ return {
           theme = "ivy",
         },
       },
+      extensions = {
+        file_browser = {
+          -- Add custom options for the file browser if needed
+          theme = "ivy",
+          hijack_netrw = true,
+        },
+      },
     })
     telescope.load_extension("fzf")
+    telescope.load_extension("file_browser") -- Load the file browser extension
+
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
 
@@ -51,5 +63,6 @@ return {
     keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find buffer" })
     keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
     keymap.set("n", "<leader>fg", "<cmd>Telescope spell_suggest<cr>", { desc = "Find Correct Spelling" })
+    keymap.set("n", "<leader>fe", "<cmd>Telescope file_browser<cr>", { desc = "Open file browser" }) -- Add keymap for file browser
   end,
 }
