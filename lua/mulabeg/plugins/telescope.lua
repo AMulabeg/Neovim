@@ -13,11 +13,14 @@ return {
     local actions = require("telescope.actions")
     telescope.setup({
       defaults = {
-        pickers = {
-          find_files = {
-            find_command = { "find", "-maxdepth", "3", ".", "-type", "f" },
-          },
+        -- Ivy style layout
+        layout_strategy = "bottom_pane",
+        layout_config = {
+          height = 0.4, -- Adjust the height as needed
+          prompt_position = "top",
         },
+        sorting_strategy = "ascending", -- Keep the prompt at the top
+        winblend = 10, -- Add transparency if you want
         path_display = { "truncate " },
         mappings = {
           i = {
@@ -27,8 +30,16 @@ return {
           },
         },
       },
+      pickers = {
+        -- Default behavior for built-in pickers
+        find_files = {
+          theme = "ivy",
+        },
+        live_grep = {
+          theme = "ivy",
+        },
+      },
     })
-
     telescope.load_extension("fzf")
     -- set keymaps
     local keymap = vim.keymap -- for conciseness
