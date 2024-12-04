@@ -52,9 +52,9 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        theme = my_lualine_theme,
-        component_separators = { left = "|", right = "|" },
-        section_separators = { left = "█", right = "█" },
+        theme = "monokai-pro",
+        -- component_separators = { left = "|", right = "|" },
+        -- section_separators = { left = "█", right = "█" },
       },
       sections = {
         lualine_x = {
