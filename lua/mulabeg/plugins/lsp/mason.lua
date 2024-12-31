@@ -35,6 +35,7 @@ return {
           "jdtls",
           "solargraph",
           "nil_ls",
+          "hls",
         },
       })
 

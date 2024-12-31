@@ -22,6 +22,7 @@ return {
         c = { "clang-format" },
         ruby = { "rubyfmt" },
         nix = { "nixpkgs-fmt" },
+        haskell = { "fourmolu" },
       },
       format_on_save = {
         lsp_fallback = true,
