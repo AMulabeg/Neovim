@@ -1,6 +1,5 @@
 return {
   "stevearc/conform.nvim",
-  lazy = true,
   event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
   config = function()
     local conform = require("conform")
@@ -20,9 +19,6 @@ return {
         lua = { "stylua" },
         python = { "black" },
         c = { "clang-format" },
-        ruby = { "rubyfmt" },
-        nix = { "nixpkgs-fmt" },
-        haskell = { "fourmolu" },
       },
       format_on_save = {
         lsp_fallback = true,

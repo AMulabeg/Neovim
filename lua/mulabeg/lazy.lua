@@ -13,13 +13,10 @@ vim.opt.conceallevel = 1
 vim.opt.rtp:prepend(lazypath)
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
-vim.g.python3_host_prog = "/opt/homebrew/anaconda3/bin/python3"
+vim.g.python3_host_prog = "/sbin/python3"
 
 require("lazy").setup({ { import = "mulabeg.plugins" }, { import = "mulabeg.plugins.lsp" } }, {
   defaults = { lazy = true },
-  -- install = {
-  --   colorscheme = { "night-owl" },
-  -- },
   checker = {
     enabled = true,
     notify = false,

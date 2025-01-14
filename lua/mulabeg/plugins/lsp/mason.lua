@@ -26,16 +26,10 @@ return {
       -- Configure mason-lspconfig
       mason_lspconfig.setup({
         ensure_installed = {
-          "lua_ls",
-          "clangd",
-          "gopls",
-          "ruff",
-          "pyright",
-          -- "basedpyright",
-          "jdtls",
-          "solargraph",
-          "nil_ls",
-          "hls",
+          "lua_ls", --lua
+          "clangd", -- C/C++
+          "ruff", -- Python
+          "pyright", --Python
         },
       })
 
@@ -45,9 +39,7 @@ return {
           "prettier", -- prettier formatter
           "stylua", -- lua formatter
           "black", -- python formatter
-          "clang-format",
-          "rubyfmt",
-          "nixpkgs-fmt",
+          "clang-format", -- C/C++ formater
         },
       })
     end,
@@ -136,17 +128,6 @@ return {
         ["pyright"] = function()
           lspconfig["pyright"].setup({
             capabilities = capabilities,
-          })
-        end,
-        ["nil_ls"] = function()
-          lspconfig["nil_ls"].setup({
-            capabilities = capabilities,
-            settings = {
-              ["nil"] = {
-                formatting = { command = { "nixpkgs-fmt" } }, -- Ensure nixfmt is used for formatting
-                autoarchive = true, -- If there's a similar setting related to autoarchive
-              },
-            },
           })
         end,
       })
