@@ -30,6 +30,11 @@ return {
           "clangd", -- C/C++
           "ruff", -- Python
           "pyright", --Python
+
+          "ts_ls",
+          "emmet_ls",
+          "svelte",
+          "graphql",
         },
       })
 
@@ -40,6 +45,8 @@ return {
           "stylua", -- lua formatter
           "black", -- python formatter
           "clang-format", -- C/C++ formater
+          "prettierd",
+          "eslint_d",
         },
       })
     end,
@@ -128,6 +135,40 @@ return {
         ["pyright"] = function()
           lspconfig["pyright"].setup({
             capabilities = capabilities,
+          })
+        end,
+        ["ts_ls"] = function()
+          lspconfig["ts_ls"].setup({
+            capabilities = capabilities,
+            disabelSuggestions = true,
+          })
+        end,
+        ["emmet_ls"] = function()
+          lspconfig["emmet_ls"].setup({
+            capabilities = capabilities,
+            filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+          })
+        end,
+        ["svelte"] = function()
+          -- configure svelte server
+          lspconfig["svelte"].setup({
+            capabilities = capabilities,
+            on_attach = function(client, bufnr)
+              vim.api.nvim_create_autocmd("BufWritePost", {
+                pattern = { "*.js", "*.ts" },
+                callback = function(ctx)
+                  -- Here use ctx.match instead of ctx.file
+                  client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+                end,
+              })
+            end,
+          })
+        end,
+        ["graphql"] = function()
+          -- configure graphql language server
+          lspconfig["graphql"].setup({
+            capabilities = capabilities,
+            filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
           })
         end,
       })

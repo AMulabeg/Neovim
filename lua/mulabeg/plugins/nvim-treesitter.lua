@@ -47,6 +47,7 @@ return {
           "python",
           "java",
           "haskell",
+          "rust",
         },
         incremental_selection = {
           enable = true,
@@ -57,7 +58,6 @@ return {
             node_decremental = "<bs>",
           },
         },
-        -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
       })
     end,
   },
