@@ -30,11 +30,11 @@ return {
           "clangd", -- C/C++
           "ruff", -- Python
           "pyright", --Python
-
           "ts_ls",
           "emmet_ls",
           "svelte",
           "graphql",
+          "gopls",
         },
       })
 
@@ -47,6 +47,7 @@ return {
           "clang-format", -- C/C++ formater
           "prettierd",
           "eslint_d",
+          "gofumpt",
         },
       })
     end,
