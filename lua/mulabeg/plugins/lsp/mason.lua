@@ -5,6 +5,7 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
+
     event = "VeryLazy",
     config = function()
       require("mason").setup({
@@ -49,16 +50,12 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
       "williamboman/mason.nvim",
-      "hrsh7th/cmp-nvim-lsp",
       { "antosha417/nvim-lsp-file-operations", config = true },
       { "folke/neodev.nvim", opts = {} },
     },
     config = function()
       local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
-      local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-      -- local capabilities = cmp_nvim_lsp.default_capabilities()
 
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
