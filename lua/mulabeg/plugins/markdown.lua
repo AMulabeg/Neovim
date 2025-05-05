@@ -6,7 +6,10 @@ return {
   ---@module 'render-markdown'
   ---@type render.md.UserConfig
   ft = { "markdown", "quarto" },
-  opts = {},
+  opts = {
+    acknowledge_conflicts = true,
+  },
+
   config = function()
     require("render-markdown").setup({
       render_modes = true,

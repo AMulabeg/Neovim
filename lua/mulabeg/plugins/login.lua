@@ -80,7 +80,7 @@ return {
       -- dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
     local function footer()
-      return "Unemployment is my passion..."
+      return "Unemployment is my passion... Update: I got a job"
     end
     -- Send config to alpha
     alpha.setup(dashboard.opts)
