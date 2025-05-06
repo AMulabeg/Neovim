@@ -33,29 +33,46 @@ return {
           "markdown",
           "markdown_inline",
           "svelte",
+
           "graphql",
 
-          "latex",
           "bash",
+
           "lua",
+
           "vim",
+
           "dockerfile",
+
           "sql",
+
           "gitignore",
+
           "query",
+
           "c",
+
           "python",
+
           "java",
+
           "haskell",
+
           "rust",
         },
 
         incremental_selection = {
+
           enable = true,
+
           keymaps = {
+
             init_selection = "<C-space>",
+
             node_incremental = "<C-space>",
+
             scope_incremental = false,
+
             node_decremental = "<bs>",
           },
         },

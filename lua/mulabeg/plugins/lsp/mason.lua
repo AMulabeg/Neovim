@@ -56,8 +56,14 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       local mason_lspconfig = require("mason-lspconfig")
+<<<<<<< HEAD
 
       local capabilities = require("blink.cmp").get_lsp_capabilities()
+=======
+      local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+      local capabilities = cmp_nvim_lsp.default_capabilities()
+>>>>>>> parent of 836a6ff (Changes)
 
       vim.diagnostic.config({
         virtual_text = { spacing = 4, prefix = "●" },
