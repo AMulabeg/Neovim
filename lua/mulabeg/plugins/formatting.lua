@@ -20,7 +20,6 @@ return {
         python = { "black" },
         c = { "clang-format" },
         ruby = { "rubyfmt" },
-        java = { "google-java-format" },
         rust = { "rustfmt" },
       },
       format_on_save = {
