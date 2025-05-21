@@ -24,6 +24,10 @@ return {
         path = "~/Documents/Obsidian Vault",
       },
     },
+    ui = {
+      enable = false,
+    },
+
     keybindings = {
       vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open Obsidian" }),
       vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Obsidian Backlinks" }),

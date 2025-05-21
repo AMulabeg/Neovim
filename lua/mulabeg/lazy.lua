@@ -9,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 2
 vim.opt.rtp:prepend(lazypath)
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true
