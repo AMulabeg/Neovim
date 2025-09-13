@@ -21,6 +21,9 @@ require("lazy").setup({ { import = "mulabeg.plugins" }, { import = "mulabeg.plug
     enabled = true,
     notify = false,
   },
+  rocks = {
+    enabled = false,
+  },
   change_detection = {
     notify = false,
   },

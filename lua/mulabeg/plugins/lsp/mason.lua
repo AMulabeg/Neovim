@@ -130,37 +130,37 @@ return {
         cmd = { "clangd", "--offset-encoding=utf-16" },
         filetypes = { "c", "cpp" },
       }
-
-      vim.lsp.config["ts_ls"] = {
-        disableSuggestions = true,
-      }
-
-      vim.lsp.config["emmet_ls"] = {
-        filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-      }
-
-      vim.lsp.config["svelte"] = {
-        on_attach = function(client, bufnr)
-          vim.api.nvim_create_autocmd("BufWritePost", {
-            pattern = { "*.js", "*.ts" },
-            callback = function(ctx)
-              client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-            end,
-          })
-        end,
-      }
-
-      vim.lsp.config["graphql"] = {
-        filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-      }
-
+      --
+      -- vim.lsp.config["ts_ls"] = {
+      --   disableSuggestions = true,
+      -- }
+      --
+      -- vim.lsp.config["emmet_ls"] = {
+      --   filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+      -- }
+      --
+      -- vim.lsp.config["svelte"] = {
+      --   on_attach = function(client, bufnr)
+      --     vim.api.nvim_create_autocmd("BufWritePost", {
+      --       pattern = { "*.js", "*.ts" },
+      --       callback = function(ctx)
+      --         client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+      --       end,
+      --     })
+      --   end,
+      -- }
+      --
+      -- vim.lsp.config["graphql"] = {
+      --   filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+      -- }
+      --
       vim.lsp.enable = {
         "clangd",
         "luals",
         "pyright",
-        "ts_ls",
-        "emmet_ls",
-        "svelte",
+        --   "ts_ls",
+        --   "emmet_ls",
+        --   "svelte",
       }
     end,
   },

@@ -19,7 +19,6 @@ return {
         lua = { "stylua" },
         python = { "black" },
         c = { "clang-format" },
-        ruby = { "rubyfmt" },
         rust = { "rustfmt" },
       },
       format_on_save = {
