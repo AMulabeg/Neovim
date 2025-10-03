@@ -9,6 +9,7 @@ return {
     {
       "L3MON4D3/LuaSnip",
       event = "InsertEnter",
+      build = "make install_jsregexp",
       dependencies = {
         {
           "rafamadriz/friendly-snippets",
@@ -33,7 +34,6 @@ return {
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
-
     cmp.setup({
       completion = {
         completeopt = "menu,menuone,preview,noselect",

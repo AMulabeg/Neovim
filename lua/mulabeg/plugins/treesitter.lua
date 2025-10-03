@@ -21,7 +21,7 @@ return {
           enable = true,
         },
         preview = {
-          icon_provider = "internal", -- "mini" or "devicons"
+          icon_provider = "mini", -- "mini" or "devicons"
         },
         auto_install = true,
         incremental_selection = {

@@ -6,5 +6,6 @@ return {
   opts = {},
   config = function()
     vim.cmd([[colorscheme gruber-darker]])
+    -- vim.cmd([[colorscheme tokyonight-night]])
   end,
 }
