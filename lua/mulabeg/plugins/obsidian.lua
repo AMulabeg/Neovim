@@ -1,22 +1,10 @@
 return {
-
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   event = "VeryLazy",
   ft = "markdown",
-  -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-  -- event = {
-  --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-  --   -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/*.md"
-  --   -- refer to `:h file-pattern` for more examples
-  --   "BufReadPre path/to/my-vault/*.md",
-  --   "BufNewFile path/to/my-vault/*.md",
-  -- },
   dependencies = {
-    -- Required.
     "nvim-lua/plenary.nvim",
-
-    -- see below for full list of optional dependencies 👇
   },
   opts = {
     workspaces = {
@@ -28,16 +16,20 @@ return {
     ui = {
       enable = false,
     },
-
-    keybindings = {
-      vim.keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<cr>", { desc = "Open Obsidian" }),
-      vim.keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<cr>", { desc = "Obsidian Backlinks" }),
-      vim.keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<cr>", { desc = "Obsidian Search" }),
-      vim.keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<cr>", { desc = "Obsidian Links" }),
-      vim.keymap.set("n", "<leader>of", "<cmd>ObsidianFollowLink<cr>", { desc = "Obsidian Follow link" }),
-      vim.keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<cr>", { desc = "Obsidian Quick Switch" }),
-    },
-
-    -- see below for full list of options 👇
+    legacy_commands = false,
+  },
+  keys = {
+    { "<leader>oo", "<cmd>Obsidian open<cr>", desc = "Open in Obsidian app" },
+    { "<leader>ob", "<cmd>Obsidian backlinks<cr>", desc = "Show backlinks" },
+    { "<leader>os", "<cmd>Obsidian search<cr>", desc = "Search notes" },
+    { "<leader>ol", "<cmd>Obsidian links<cr>", desc = "Show links" },
+    { "<leader>of", "<cmd>Obsidian follow_link<cr>", desc = "Follow link" },
+    { "<leader>oq", "<cmd>Obsidian quick_switch<cr>", desc = "Quick switch" },
+    { "<leader>on", "<cmd>Obsidian new<cr>", desc = "New note" },
+    { "<leader>ot", "<cmd>Obsidian today<cr>", desc = "Today's note" },
+    { "<leader>oy", "<cmd>Obsidian yesterday<cr>", desc = "Yesterday's note" },
+    { "<leader>om", "<cmd>Obsidian tomorrow<cr>", desc = "Tomorrow's note" },
+    { "<leader>or", "<cmd>Obsidian rename<cr>", desc = "Rename note" },
+    { "<leader>oc", "<cmd>Obsidian toggle_checkbox<cr>", desc = "Toggle checkbox" },
   },
 }
