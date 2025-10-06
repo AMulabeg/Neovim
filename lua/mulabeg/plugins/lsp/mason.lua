@@ -20,7 +20,7 @@ return {
       })
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "ruff" },
+        ensure_installed = { "lua_ls", "clangd", "ruff", "jedi_language_server" },
       })
 
       require("mason-tool-installer").setup({
@@ -42,6 +42,7 @@ return {
     },
     config = function()
       local capabilities = require("blink.cmp").get_lsp_capabilities()
+      capabilities.positionEncoding = { "utf-16" }
       local fzf = require("fzf-lua")
 
       -- Diagnostics configuration
@@ -104,14 +105,14 @@ return {
         capabilities = capabilities,
       }
 
-      vim.lsp.config["ruff"] = {
+      vim.lsp.config["jedi_language_server"] = {
         filetypes = { "python" },
         capabilities = capabilities,
       }
 
       vim.lsp.enable("lua_ls")
-      vim.lsp.enable("ruff")
       vim.lsp.enable("clangd")
+      vim.lsp.enable("jedi_language_server")
     end,
   },
 }
