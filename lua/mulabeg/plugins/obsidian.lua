@@ -16,6 +16,11 @@ return {
     ui = {
       enable = false,
     },
+    completion = {
+      nvim_cmp = false,
+      blink = true,
+      min_chars = 2,
+    },
     legacy_commands = false,
   },
   keys = {
