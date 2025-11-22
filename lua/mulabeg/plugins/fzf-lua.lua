@@ -16,9 +16,9 @@ return {
         row = 1.0, -- bottom of the screen
         col = 0.5,
         border = "none",
-        preview = {
-          hidden = "hidden", -- disable preview by default
-        },
+        --   preview = {
+        --     -- hidden = "hidden", -- disable preview by default
+        --   },
       },
       fzf_opts = {
         ["--layout"] = "reverse", -- prompt at top
@@ -44,7 +44,6 @@ return {
       },
     })
 
-    -- Keymaps (similar to your Telescope setup)
     local keymap = vim.keymap.set
     keymap("n", "<leader>ff", fzf.files, { desc = "Fuzzy find files in cwd" })
     keymap("n", "<leader>fr", fzf.oldfiles, { desc = "Fuzzy find recent files" })

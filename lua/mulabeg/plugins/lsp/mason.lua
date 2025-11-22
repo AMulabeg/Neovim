@@ -20,11 +20,18 @@ return {
       })
 
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "ruff", "jedi_language_server" },
+        ensure_installed = {
+          "lua_ls",
+          "clangd",
+          "ruff",
+          "jedi_language_server",
+          "gopls",
+          "hls",
+        },
       })
 
       require("mason-tool-installer").setup({
-        ensure_installed = { "stylua", "clang-format" },
+        ensure_installed = { "stylua", "clang-format", "gofumpt", "fourmolu", "haskell-language-server" },
       })
     end,
   },
@@ -110,9 +117,20 @@ return {
         capabilities = capabilities,
       }
 
+      vim.lsp.config["hls"] = {
+        cmd = { "haskell-language-server-wrapper", "--lsp" },
+        filetypes = { "haskell", "lhaskell" },
+        root_markers = { "hie.yaml", "stack.yaml", "cabal.project", "*.cabal" },
+        capabilities = capabilities,
+      }
+
+      -- enable it
+      vim.lsp.enable("hls")
+
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("clangd")
       vim.lsp.enable("jedi_language_server")
+      vim.lsp.enable("gopls")
     end,
   },
 }
