@@ -1,5 +1,4 @@
 local keymap = vim.keymap
-
 return {
   {
     "williamboman/mason.nvim",
@@ -21,17 +20,15 @@ return {
 
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls",
           "clangd",
           "ruff",
           "jedi_language_server",
           "gopls",
-          "hls",
         },
       })
 
       require("mason-tool-installer").setup({
-        ensure_installed = { "stylua", "clang-format", "gofumpt", "fourmolu", "haskell-language-server" },
+        ensure_installed = { "stylua", "clang-format", "gofumpt", "ormolu" },
       })
     end,
   },
@@ -92,7 +89,7 @@ return {
 
       -- Individual LSP servers
       vim.lsp.config["lua_ls"] = {
-        cmd = { "lua-language-server" },
+        cmd = { "/home/amulabeg/LSPs/lua-language-server/bin/lua-language-server" },
         filetypes = { "lua" },
         root_markers = { ".luarc.json", ".luarc.jsonc" },
         capabilities = capabilities,
@@ -118,15 +115,12 @@ return {
       }
 
       vim.lsp.config["hls"] = {
-        cmd = { "haskell-language-server-wrapper", "--lsp" },
+        cmd = { "/home/amulabeg/.ghcup/bin/haskell-language-server-9.4.7~2.4.0.0", "--lsp" },
         filetypes = { "haskell", "lhaskell" },
-        root_markers = { "hie.yaml", "stack.yaml", "cabal.project", "*.cabal" },
+        settings = { haskell = { formattingProvider = "ormolu", hlintOn = true } },
         capabilities = capabilities,
       }
-
-      -- enable it
       vim.lsp.enable("hls")
-
       vim.lsp.enable("lua_ls")
       vim.lsp.enable("clangd")
       vim.lsp.enable("jedi_language_server")
