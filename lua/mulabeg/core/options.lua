@@ -34,3 +34,6 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 opt.swapfile = true
+
+vim.cmd("highlight IblIndent guifg=#3b4261")
+vim.cmd("highlight IblScope guifg=#7aa2f7")

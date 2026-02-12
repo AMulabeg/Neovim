@@ -6,6 +6,12 @@ return {
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
+    dashboard.section.header.val = {
+      [[   "An OS with a good text editor"  ]],
+      [[            — Emacs users          ]],
+      [[                                   ]],
+      [[        Now booting Neovim…         ]],
+    }
     -- Set header
     -- dashboard.section.header.val = {
     --   [[ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ]],
@@ -79,12 +85,8 @@ return {
       -- dashboard.button("SPC fs", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
       -- dashboard.button("q", " > Quit NVIM", "<cmd>qa<CR>"),
     }
-    local function footer()
-      return "Unemployment is my passion..."
-    end
     -- Send config to alpha
     alpha.setup(dashboard.opts)
-    dashboard.section.footer.val = footer()
     -- Disable folding on alpha buffer
     vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
   end,
