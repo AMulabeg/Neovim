@@ -1,11 +1,11 @@
--- make sure you have devicons installed
--- { "nvim-tree/nvim-web-devicons" }
-
 return {
   "stevearc/oil.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = { "echasnovski/mini.icons" },
   event = "VeryLazy",
   config = function()
+    require("mini.icons").setup()
+    MiniIcons.mock_nvim_web_devicons()
+
     require("oil").setup({
       default_file_explorer = true,
       delete_to_trash = true,
@@ -21,7 +21,6 @@ return {
       },
     })
 
-    -- map "-" to open oil in the current buffer's directory
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
   end,
 }

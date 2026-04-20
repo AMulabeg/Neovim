@@ -41,7 +41,15 @@ return {
       "saghen/blink.cmp",
       "williamboman/mason.nvim",
       { "antosha417/nvim-lsp-file-operations", config = true },
-      { "folke/neodev.nvim", opts = {} },
+      {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {
+          library = {
+            { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+          },
+        },
+      },
       "ibhagwan/fzf-lua",
     },
     config = function()

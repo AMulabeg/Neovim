@@ -1,13 +1,9 @@
 return {
-  "nvim-tree/nvim-web-devicons",
+  "echasnovski/mini.nvim",
   config = function()
-    require("nvim-web-devicons").set_icon({
-      gql = {
-        icon = "",
-        color = "#e535ab",
-        cterm_color = "199",
-        name = "GraphQL",
-      },
-    })
+    require("mini.icons").setup()
+    -- This makes mini.icons respond to any require("nvim-web-devicons")
+    -- calls from other plugins, so nothing breaks:
+    MiniIcons.mock_nvim_web_devicons()
   end,
 }
