@@ -18,3 +18,12 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 keymap.set("n", "<leader><tab>", "<Cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<tab>", "<Cmd>bnext<CR>", { desc = "Go to next buffer" })
 keymap.set("n", "<leader>bd", "<Cmd>bdelete<CR>", { desc = "Delete buffer" })
+keymap.set("n", "<leader>sm", function()
+  if vim.t.maximized then
+    vim.cmd("wincmd =")
+    vim.t.maximized = false
+  else
+    vim.cmd("wincmd | | wincmd _")
+    vim.t.maximized = true
+  end
+end, { desc = "Maximize window toggle" })
