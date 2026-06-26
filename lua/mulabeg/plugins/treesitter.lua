@@ -1,17 +1,17 @@
 return {
-  {
-    "nvim-treesitter/nvim-treesitter",
-    branch = "master",
-    build = ":TSUpdate",
-    lazy = false,
-    config = function()
-      local configs = require("nvim-treesitter.configs")
-      configs.setup({
-        auto_install = true,
-        highlight = {
-          enable = true,
-        },
-      })
-    end,
-  },
+  "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPre", "BufNewFile" },
+  build = ":TSUpdate",
+  config = function()
+    require("nvim-treesitter.configs").setup({
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
+    })
+
+    vim.treesitter.language.register("bash", "zsh")
+  end,
 }

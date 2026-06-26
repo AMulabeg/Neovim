@@ -24,6 +24,7 @@ return {
           "ruff",
           "jedi_language_server",
           "gopls",
+          "lua_ls",
         },
       })
 
@@ -97,7 +98,6 @@ return {
 
       -- Individual LSP servers
       vim.lsp.config["lua_ls"] = {
-        cmd = { "/home/amulabeg/LSPs/lua-language-server/bin/lua-language-server" },
         filetypes = { "lua" },
         root_markers = { ".luarc.json", ".luarc.jsonc" },
         capabilities = capabilities,
