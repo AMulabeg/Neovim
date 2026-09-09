@@ -86,5 +86,6 @@ return {
     map("n", "<leader>fb", fzf.buffers, { desc = "Find buffer" })
     map("n", "<leader>ft", "<cmd>TodoFzfLua<cr>", { desc = "Find todos" })
     map("n", "<leader>fg", fzf.spell_suggest, { desc = "Find correct spelling" })
+    map("n", "<leader>fa", "<cmd>AerialToggle<cr>", { desc = "Toggle aerial outline" })
   end,
 }
