@@ -9,16 +9,18 @@ return {
   opts = {
     workspaces = {
       {
-        name = "notes",
-        path = "~/Documents/Obsidian Vault",
+        name = "Uni",
+        path = "~/Documents/Uni Vault",
+      },
+      {
+        name = "Life",
+        path = "~/Documents/Life Vault",
       },
     },
     ui = {
       enable = false,
     },
     completion = {
-      nvim_cmp = false,
-      blink = true,
       min_chars = 2,
     },
     legacy_commands = false,

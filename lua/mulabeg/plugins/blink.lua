@@ -60,7 +60,9 @@ return {
         default = { "codeium", "lsp", "path", "snippets", "buffer" },
         per_filetype = {
           sql = { "snippets", "dadbod", "buffer" },
-          markdown = { "obsidian", "path", "buffer" },
+          markdown = {
+            inherit_defaults = true,
+          },
         },
         providers = {
           dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
