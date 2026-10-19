@@ -35,6 +35,20 @@ local THEMES = {
       require("onedark").setup({ style = "dark" })
     end,
   },
+  ["rose-pine"] = {
+    repo = "rose-pine/nvim",
+    name = "rose-pine",
+    colorscheme = "rose-pine",
+  },
+  ["gruvbox"] = {
+    repo = "ellisonleao/gruvbox.nvim",
+    name = "gruvbox.nvim",
+    colorscheme = "gruvbox",
+    setup = function()
+      vim.o.background = "dark"
+      require("gruvbox").setup({ contrast = "" })
+    end,
+  },
 }
 
 -- Make sure the state file exists so fs_event has something to watch, and

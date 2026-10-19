@@ -27,3 +27,51 @@ keymap.set("n", "<leader>sm", function()
     vim.t.maximized = true
   end
 end, { desc = "Maximize window toggle" })
+
+local function pi_prompt(mode, prompt)
+  local cwd = vim.fn.getcwd()
+  local args = { "pi-tmux", mode, cwd }
+  if prompt and prompt ~= "" then
+    table.insert(args, prompt)
+  end
+  vim.fn.jobstart(args, { detach = true })
+end
+
+local function get_visual_selection()
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  local start_line, start_col = start_pos[2], start_pos[3]
+  local end_line, end_col = end_pos[2], end_pos[3]
+  local lines = vim.fn.getline(start_line, end_line)
+  if #lines == 0 then
+    return ""
+  end
+  lines[1] = string.sub(lines[1], start_col)
+  lines[#lines] = string.sub(lines[#lines], 1, end_col)
+  return table.concat(lines, "\n")
+end
+
+vim.api.nvim_create_user_command("Pi", function(opts)
+  pi_prompt("popup", table.concat(opts.fargs, " "))
+end, { nargs = "*", desc = "Open Pi in a tmux popup" })
+
+vim.api.nvim_create_user_command("PiSplit", function(opts)
+  pi_prompt("split", table.concat(opts.fargs, " "))
+end, { nargs = "*", desc = "Open Pi in a tmux side pane" })
+
+keymap.set("n", "<leader>ap", function()
+  pi_prompt("popup")
+end, { desc = "Open Pi popup" })
+
+keymap.set("n", "<leader>aP", function()
+  pi_prompt("split")
+end, { desc = "Open Pi side pane" })
+
+keymap.set("x", "<leader>ap", function()
+  local file = vim.fn.expand("%:p")
+  local start_line = vim.fn.line("'<")
+  local end_line = vim.fn.line("'>")
+  local text = get_visual_selection()
+  local prompt = string.format("Review this selection from %s:%d-%d:\n\n```\n%s\n```", file, start_line, end_line, text)
+  pi_prompt("popup", prompt)
+end, { desc = "Ask Pi about selection" })

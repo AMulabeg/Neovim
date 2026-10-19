@@ -44,6 +44,7 @@ return {
       },
       keymap = {
         builtin = {
+          ["<C-f>"] = "toggle-fullscreen",
           ["<C-k>"] = "toggle-preview-up",
           ["<C-j>"] = "toggle-preview-down",
           ["<C-q>"] = "select-all+accept",
